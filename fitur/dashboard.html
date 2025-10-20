@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemberitahuan Polibatam</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left-section">
+      <img src="poli2.png" alt="Polibatam Logo" class="logo">
+      <div class="grid-icon" id="gridBtn">
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+    <div class="search-area">
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <button id="searchBtn">Search</button>
+      <button id="filterBtn" class="hidden">Filter</button>
+    </div>
+  </nav>
+
+ 
+  <div class="dropdown" id="dropdownMenu">
+    <ul>
+      <li><a href="calender.html">Calendar</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="login.html">Login Admin</a></li>
+    </ul>
+  </div>
+
+
+  <div class="filter-panel" id="filterPanel">
+    <div class="filter-item"></div>
+    <div class="filter-item"></div>
+    <div class="filter-item"></div>
+  </div>
+
+
+  <section class="banner">
+    <img src="poli1.png" alt="Banner" />
+  </section>
+
+
+  <section class="content">
+    <h2 class="judul-section">📢 Pemberitahuan Terbaru</h2>
+
+    <div class="notif-box" id="news1">
+      <h3>Jadwal UTS</h3>
+      <p>UTS dimulai pada tanggal 28 Oktober 2025. Pastikan seluruh mahasiswa mempersiapkan diri.</p>
+      <span class="tanggal">Diterbitkan: 20 Oktober 2025</span>
+    </div>
+
+    <div class="notif-box" id="news2">
+      <h3>Pengumuman Libur</h3>
+      <p>Kampus akan libur pada tanggal 1 November 2025 dalam rangka peringatan Hari Sumpah Pemuda.</p>
+      <span class="tanggal">Diterbitkan: 19 Oktober 2025</span>
+    </div>
+
+    <div class="notif-box" id="news3">
+      <h3>Pendaftaran Lomba</h3>
+      <p>Segera daftarkan tim kamu untuk mengikuti lomba inovasi teknologi tingkat nasional.</p>
+      <span class="tanggal">Diterbitkan: 18 Oktober 2025</span>
+    </div>
+  </section>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
