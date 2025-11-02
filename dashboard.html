@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pemberitahuan Polibatam</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+
+  <nav class="navbar">
+    <div class="left-section">
+      <img src="poli2.png" alt="Polibatam Logo" class="logo">
+      <div class="grid-icon" id="gridBtn">
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+        <div></div><div></div><div></div>
+      </div>
+    </div>
+
+    <div class="search-area">
+      <input type="text" id="searchInput" placeholder="Search..." />
+      <button id="searchBtn"><img src="search.png"></button>
+      <button id="filterBtn" class="hidden">Filter</button>
+    </div>
+  </nav>
+
+
+  <div class="dropdown" id="dropdownMenu">
+    <button class="menu-btn" onclick="location.href='calender.html'"><img src="calendar.png">Kalender</button>
+    <button class="menu-btn" onclick="location.href='kontak.html'"><img src="telephone.png">Kontak</button>
+    <button class="menu-btn" onclick="location.href='login.html'"><img src="key.png">Login Admin</button>
+  </div>
+
+
+  <div class="filter-panel" id="filterPanel">
+  </div>
+
+  <section class="banner">
+    <img src="poli1.png" alt="Banner" />
+  </section>
+
+  <section class="content">
+    <h2 class="judul-section">
+    <img src="pengumuman.png" alt="Pengumuman" class="icon-pengumuman">
+    Pengumuman Terbaru
+  </h2>
+ <button id="addNewsBtn" class="add-btn">+ Tambahkan Pengumuman</button>
+    <div class="notif-box" id="news1">
+      <h3>Jadwal UTS</h3>
+      <p>UTS dimulai pada tanggal 28 Oktober 2025. Pastikan seluruh mahasiswa mempersiapkan diri.</p>
+      <span class="tanggal">Diterbitkan: 20 Oktober 2025</span>
+    </div>
+
+    <div class="notif-box" id="news2">
+      <h3>Pengumuman Libur</h3>
+      <p>Kampus akan libur pada tanggal 1 November 2025 dalam rangka peringatan Hari Sumpah Pemuda.</p>
+      <span class="tanggal">Diterbitkan: 19 Oktober 2025</span>
+    </div>
+
+    <div class="notif-box" id="news3">
+      <h3>Pendaftaran Lomba</h3>
+      <p>Segera daftarkan tim kamu untuk mengikuti lomba inovasi teknologi tingkat nasional.</p>
+      <span class="tanggal">Diterbitkan: 18 Oktober 2025</span>
+    </div>
+  </section>
+
+  <div id="editPopup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Edit Pengumuman</h2>
+    <label>Judul:</label>
+    <input type="text" id="editTitle" />
+
+    <label>Isi:</label>
+    <textarea id="editContent"></textarea>
+
+    <label>Tanggal:</label>
+    <input type="text" id="editDate" />
+
+    <div class="popup-actions">
+      <button id="saveEdit">Simpan</button>
+      <button id="cancelEdit">Batal</button>
+  </div>
+ </div> 
+</div> 
+
+<div id="addPopup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Tambah Pengumuman</h2>
+    <label>Judul:</label>
+    <input type="text" id="newTitle" placeholder="Masukkan judul pengumuman">
+
+    <label>Isi:</label>
+    <textarea id="newContent" placeholder="Masukkan isi pengumuman"></textarea>
+
+    <label>Tanggal:</label>
+    <input type="text" id="newDate" placeholder="Contoh: 21 Oktober 2025">
+
+    <div class="popup-actions">
+      <button id="saveNew">Simpan</button>
+      <button id="cancelNew">Batal</button>
+    </div>
+  </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
