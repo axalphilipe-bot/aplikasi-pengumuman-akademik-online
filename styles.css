@@ -1,0 +1,71 @@
+body {
+  background: url('poli.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: rgba(171, 170, 170, 0.5);
+  backdrop-filter: blur(2px);
+  padding: 25px 30px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  width: 130px;
+  margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"],
+.password-wrapper input {
+  width: 100%;
+  padding: 7px 35px 7px 10px;
+  border-radius: 4px;
+  border: none;
+  margin: 8px 0;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background-color: #1b75e2;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #007bff, #00c3ff);
+}
+
+.remember {
+  text-align: left;
+  font-size: 12px;
+}
+
+.footer {
+  font-size: 10px;
+  margin-top: 10px;
+  color: #ddd;
+}
