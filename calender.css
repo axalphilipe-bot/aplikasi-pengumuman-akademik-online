@@ -1,0 +1,218 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('poli1.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(1px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Diubah dari 'left' ke 'flex-start' untuk konsistensi */
+  background: linear-gradient(270deg, #0BA6DF, #00c6ff, #0072ff, #0BA6DF);
+  background-size: 600% 600%;
+  animation: gradientMove 8s ease infinite;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.back-btn {
+  background: rgba(2, 2, 2, 0);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Tambahkan border tipis untuk visibilitas */
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.back-btn img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px; /* Diperbaiki dari 1px */
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+.back-btn:hover {
+  background: linear-gradient(90deg, #007bff, #00c3ff);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.calendar-container {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calendar-header button {
+  background-color: #1b75e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.calendar-header button:hover {
+  background-color: #0056b3; /* Diubah untuk kontras yang lebih baik */
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 60%;
+  max-width: 700px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.day-name,
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.day-name {
+  font-weight: 600;
+  color: #1b75e2;
+  background: #e8e9ff;
+  border-radius: 50%;
+}
+
+.day {
+  color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  width: 55px;
+  height: 55px;
+  position: relative;
+}
+.day.has-news::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: blue;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.day:hover {
+  background-color: #dcdfff;
+}
+
+.day.today {
+  background: #1b75e2;
+  color: white;
+  font-weight: bold;
+}
+
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #1b75e2;
+}
+
+.popup-content button {
+  margin-top: 10px;
+  background-color: #1b75e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.popup-content button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
